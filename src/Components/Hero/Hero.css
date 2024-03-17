@@ -1,0 +1,47 @@
+.hero {
+    height: 80vh;
+    display: flex;
+    background: linear-gradient(180deg, #2D893E, #e1ffea22 60%);
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-right: 100px;
+    line-height: 1.1;
+}
+
+.hero-right h1 {
+    color: #090909;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.hero-right button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 310px;
+    height: 70px;
+    border-radius: 75px;
+    margin-top: 30px;
+    background: #2D893E;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-left img {
+    width: 85%;
+}
