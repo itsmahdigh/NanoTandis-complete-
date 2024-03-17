@@ -1,11 +1,13 @@
 import React from 'react'
 import  Hero  from '../Components/Hero/Hero'
 import Popular from "../Components/Popular/popular"
- const LandingPage = () => {
+import Offers from '../Components/Offers/Offers'
+const LandingPage = () => {
   return (
     <div>
       <Hero />
       <Popular/>
+      <Offers/>
     </div>
   )
 }
