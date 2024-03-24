@@ -25,6 +25,10 @@ const Footer = () => {
 					<img src="" alt="twiter logo" />
 				</div>
 			</div>
+			<div className="footer-copyright">
+				<hr />
+				<p>تمامی حقوق مادی و معنوی این وبسایت متلق به مهدی است!</p>
+			</div>
 		</div>
 	)
 }
