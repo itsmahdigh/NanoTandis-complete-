@@ -1,8 +1,9 @@
 import React from 'react'
-
+import "./CSS/ShopCategory.css"
 const ShopCategory = () => {
   return (
-    <div>ShopCategory</div>
+    <div className='shop-category'>
+      ShopCategory</div>
   )
 }
 export default ShopCategory
