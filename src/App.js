@@ -5,13 +5,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faFontAwesome } from '@fortawesome/free-brands-svg-icons'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-
-
 import ShopCategory from "./Pages/ShopCategory";
 import Product from "./Pages/Product";
 import Cart from "./Pages/Cart";
 import LoginSignup from "./Pages/LoginSignup";
-import Footer from "./Components/Footer/Footer";
 library.add(fas, faTwitter, faFontAwesome)
 
 
@@ -34,9 +31,7 @@ function App() {
           <Route path="/Cart" element={<Cart />}></Route>
           <Route path="/Login" element={<LoginSignup />}></Route>
         </Routes>
-        <Footer/>
       </BrowserRouter>
-      
     </div>
   );
 }
