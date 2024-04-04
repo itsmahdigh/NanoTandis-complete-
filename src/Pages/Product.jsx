@@ -4,20 +4,24 @@ import {useParams} from "react-router-dom";
 import BreadCrum from "../Components/Breadcrum/BreadCrum";
 import ProductDisplay from "../Components/ProductDisplay/ProductDisplay";
 import all_product from "../Components/Assets/all_product";
+import DescriptionBox from "../Components/DescriptionBox/DescriptionBox";
+import RelatedProducts from "../Components/RelatedProducts/RelatedProducts";
 const Product = () => {
-    const All_product = useContext(ShopContext);
+    const {all_product} = useContext(ShopContext);
 
     const {productId} = useParams()
     // const product = this.all_product.map(row=>{
     //     row.find((e) => e.id === Number(productId))
     // })
-    const product=All_product.find((e)=>e.id===Number(productId))
+    const product=all_product.find((e)=>e.id===Number(productId))
         // .find((e) => e.id === Number(productId))
 
     return (
         <div>
             <BreadCrum product={product}/>
             <ProductDisplay product={product}/>
+            <DescriptionBox/>
+            <RelatedProducts/>
         </div>
     )
 }
