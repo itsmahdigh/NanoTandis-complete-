@@ -9,7 +9,7 @@ import Item from '../Item/item'
 			<hr />
 			<div className="popular-item">
 				{PopularData.map((item, i) => {
-					return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price}/>
+					return <Item key={i} id={item.id} name={item.name} image={item.img} new_price={item.new_price} old_price={item.old_price}/>
 				})}
 			</div>
 		</div>

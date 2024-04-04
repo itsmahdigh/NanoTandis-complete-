@@ -3,11 +3,17 @@ import {ShopContext} from "../Context/ShopContext";
 import {useParams} from "react-router-dom";
 import BreadCrum from "../Components/Breadcrum/BreadCrum";
 import ProductDisplay from "../Components/ProductDisplay/ProductDisplay";
-
+import all_product from "../Components/Assets/all_product";
 const Product = () => {
-    const all_product = useContext(ShopContext);
-    const productId = useParams()
-    const product = all_product.find((e) => e.id === Number(productId))
+    const All_product = useContext(ShopContext);
+
+    const {productId} = useParams()
+    // const product = this.all_product.map(row=>{
+    //     row.find((e) => e.id === Number(productId))
+    // })
+    const product=All_product.find((e)=>e.id===Number(productId))
+        // .find((e) => e.id === Number(productId))
+
     return (
         <div>
             <BreadCrum product={product}/>

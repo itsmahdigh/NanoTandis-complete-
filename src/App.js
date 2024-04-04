@@ -4,7 +4,7 @@ import {Navbar} from './Components/Navbar/Navbar';
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {fas} from '@fortawesome/free-solid-svg-icons'
 import {faFontAwesome, faTwitter} from '@fortawesome/free-brands-svg-icons'
-import {BrowserRouter, Route, Routes} from "react-router-dom"
+import {BrowserRouter, Outlet, Route, Routes} from "react-router-dom"
 import ShopCategory from "./Pages/ShopCategory";
 import Product from "./Pages/Product";
 import Cart from "./Pages/Cart";
@@ -32,12 +32,12 @@ class App extends Component {
 
                         <Route path="/product" element={<Product/>}>
                             <Route path=":productId"></Route>
-
                         </Route>
                         <Route path="/Cart" element={<Cart/>}></Route>
                         <Route path="/Login" element={<LoginSignup/>}></Route>
                     </Routes>
                     <Footer/>
+                    <Outlet/>
                 </BrowserRouter>
             </div>);
     }
