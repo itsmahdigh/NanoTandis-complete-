@@ -4,7 +4,7 @@ import {ShopContext} from "../Context/ShopContext";
 import Item from "../Components/Item/item";
 const ShopCategory = (props) => {
 
-    const all_product = useContext(ShopContext)
+    const {all_product} = useContext(ShopContext)
     return (
         <div className={"shop-category"}>
             <h1 className={'shopcategory-banner'}>{props.banner}</h1>

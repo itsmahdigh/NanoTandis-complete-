@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './ProductDisplay.css'
+import {ShopContext} from "../../Context/ShopContext";
 
 function ProductDisplay(props) {
     const {product} = props;
+    const {addToCart}=useContext(ShopContext)
     return (
         <div className={'display'}>
             <div className="productdisplay-left">
@@ -82,7 +84,7 @@ function ProductDisplay(props) {
                         <div>5</div>
                     </div>
                 </div>
-                <button>اضافه کردن به سبد خرید</button>
+                <button onClick={()=>{addToCart(product.id)}}>اضافه کردن به سبد خرید</button>
             </div>
         </div>
     );
