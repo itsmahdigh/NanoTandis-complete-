@@ -3,7 +3,7 @@ import './CartItem.css'
 import {ShopContext} from "../../Context/ShopContext";
 
 function CartItem() {
-    const {all_product, cartItems, removeFromCart} = useContext(ShopContext)
+    const {getTotalCartAmount,all_product, cartItems, removeFromCart} = useContext(ShopContext)
 
     return (
         <div className={'cartitems'}>
@@ -41,12 +41,38 @@ function CartItem() {
 
                     </div>
                 }
-                    return null
-            }
-
-            )
-
-            }
+                return null
+            })}
+            <div className="cartitems">
+                <div className="cartitems-total">
+                    <h1>جمع حساب</h1>
+                    <div>
+                        <div className="cartitems-total-item">
+                            <p>جمع</p>
+                            <p>{getTotalCartAmount()}</p>
+                        </div>
+                        <hr/>
+                        <div className="cartitems-total-item">
+                            <p>تخفیف</p>
+                            <p>مقدار تخفیف</p>
+                        </div>
+                        <hr/>
+                        <div className="cartitems-total-item">
+                            <h3>جمع</h3>
+                            <h3>{getTotalCartAmount()}</h3>
+                        </div>
+                    </div>
+                    <button>انتقال به چک نهایی</button>
+                </div>
+                <div className="cartitems-promocode">
+                    <p>اگر کد تخفیف دارید اینجا وارد کنید
+                    </p>
+                    <div className="cartitems-promobox">
+                        <input type="text" placeholder={'کد تخفیف'}/>
+                        <button>اعمال</button>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
